@@ -10,6 +10,8 @@ const DIALOGUE = [
     { user: "Licorne Codeuse", text: "On verra bien ! En attendant, je retourne au travail... et cette fois, je suis prête à tout !" }
 ];
 
+let currentIndex = 0;
+
 document.getElementById('startButton').addEventListener('click', () => {
     document.getElementById('welcomeText').style.display = 'none';
     document.getElementById('startButton').style.display = 'none';
@@ -25,4 +27,41 @@ document.getElementById('startButton').addEventListener('click', () => {
     document.getElementById('nextButton').style.display = 'inline-block';
 
     // Démarrer le dialogue
+    displayNextLine();
 })
+
+document.getElementById('nextButton').addEventListener('click', () => {
+    displayNextLine();
+});
+
+function displayNextLine(){
+    if(currentIndex < DIALOGUE.length){
+        // Récupère l'objet de dialogue correspondant à l'index actuel.
+        const LINE = DIALOGUE[currentIndex];
+
+        // Sélectionne la boîte de dialogue dans le DOM.
+        const DIALOGUEBOX = document.getElementById('dialogueBox');
+
+        // Supprimer tout le contenu précédent dans la boîte de dialogue
+        DIALOGUEBOX.innerHTML = '';
+
+        // Crée un nouvel élément de paragraphe pour afficher le texte.
+        const P = document.createElement('p'); 
+        
+        // Remplit le paragraphe avec le texte du dialogue actuel.
+        P.textContent = `${LINE.text}`
+
+        // Ajoute le paragraphe avec le texte à la boîte de dialogue dans le DOM.
+        DIALOGUEBOX.appendChild(P);
+        
+        
+        
+        
+        
+        console.log(LINE.text);
+        currentIndex ++;
+    }else{
+        document.getElementById('nextButton').style.display = 'none';
+        document.getElementById('restartButton').style.display = 'inline-block';
+    }
+}
