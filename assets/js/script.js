@@ -65,6 +65,23 @@ function displayNextLine(){
         // Remplit le paragraphe avec le texte du dialogue actuel.
         P.textContent = `${LINE.text}`
 
+        if(LINE.user === "Licorne Codeuse"){
+            // Associe la classe 'unicorn' au paragraphe pour le styliser (texte en rose).
+            P.className = 'unicorn';
+            // Ajoute une bordure rose autour de l'image de la Licorne.
+            document.getElementById('unicornImg').classList.add('highlight');
+            // Enlève la bordure autour de l'image du Lapin Bug.
+            document.getElementById('rabbitImg').classList.remove('highlight')
+
+        }else if (LINE.user === "Lapin Bug"){
+            // Associe la classe 'rabbit' au paragraphe pour le styliser (texte en bleu).
+            P.className = 'rabbit';
+            // Ajoute une bordure bleue autour de l'image du Lapin.
+            document.getElementById('rabbitImg').classList.add('highlight')
+            // Enlève la bordure autour de l'image de la Licorne.
+            document.getElementById('unicornImg').classList.remove('highlight');
+        }
+
         // Ajoute le paragraphe avec le texte à la boîte de dialogue dans le DOM.
         DIALOGUEBOX.appendChild(P);
         
