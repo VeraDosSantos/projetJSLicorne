@@ -29,6 +29,9 @@ h1{
     margin-bottom: 20px;
     border-radius: 10px;
 }
+p{
+    color: black;
+}
 
 #dialogueBox{
     background-color: white;
