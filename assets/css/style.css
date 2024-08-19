@@ -29,9 +29,6 @@ h1{
     margin-bottom: 20px;
     border-radius: 10px;
 }
-p{
-    color: black;
-}
 
 #dialogueBox{
     background-color: white;
@@ -60,3 +57,49 @@ button{
     display: none; /* Caché par défaut */
 }
 
+/* Style des dialogues */
+.unicorn {
+    color: #f11fdf; /* Texte rose */
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.rabbit {
+    color: #334df1; /* Texte bleu */
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Style des images avec une bordure lorsque mises en surbrillance */
+#unicornImg.highlight {
+    border: 5px solid #f11fdf;
+}
+
+#rabbitImg.highlight {
+    border: 5px solid #334df1;
+}
+
+@media screen and (max-width:768px){
+    .row{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+
+    #licorneImage, #lapinImage {
+        display: none; /* Caché par défaut */
+        width: 50%; /* Taille des images */
+        margin-bottom: 20px; /* Espacement en bas des images */
+        border-radius: 10px; /* Coins arrondis */
+        align-self: center;
+    }
+    
+    #container{
+        min-height: 800px;
+    }
+
+    button{
+        position: fixed;
+        bottom: 20px;
+    }
+}
