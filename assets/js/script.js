@@ -34,6 +34,20 @@ document.getElementById('nextButton').addEventListener('click', () => {
     displayNextLine();
 });
 
+document.getElementById('restartButton').addEventListener('click',() => {
+    currentIndex = 0;
+    document.getElementById('dialogueBox').innerHTML = '';
+    document.getElementById('startButton').style.display = 'inline-block';
+    document.getElementById('restartButton').style.display = 'none';
+    document.getElementById('nextButton').style.display = 'none';
+    
+    // Réinitialiser les images et le texte de bienvenue
+    document.getElementById('unicornImg').style.display = 'none';
+    document.getElementById('rabbitImg').style.display = 'none';
+    document.getElementById('welcomeText').style.display = 'block';
+    document.getElementById('dialogueBox').style.display = 'none';
+});
+
 function displayNextLine(){
     if(currentIndex < DIALOGUE.length){
         // Récupère l'objet de dialogue correspondant à l'index actuel.
@@ -54,11 +68,6 @@ function displayNextLine(){
         // Ajoute le paragraphe avec le texte à la boîte de dialogue dans le DOM.
         DIALOGUEBOX.appendChild(P);
         
-        
-        
-        
-        
-        console.log(LINE.text);
         currentIndex ++;
     }else{
         document.getElementById('nextButton').style.display = 'none';
