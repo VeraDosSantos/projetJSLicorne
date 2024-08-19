@@ -24,6 +24,7 @@ h1{
 }
 
 #unicornImg, #rabbitImg{
+    display: none; /* Caché par défaut */
     width: 20%;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -37,6 +38,7 @@ h1{
     margin-top: 20px;
     max-width: 80%;
     margin: 0 auto;
+    display: none; /* Caché par défaut */
 }
 
 button{
@@ -49,5 +51,9 @@ button{
     border: none;
     border-radius: 10px;
     box-shadow: 5px 5px 5px #ffffff;
+}
+
+#nextButton, #restartButton {
+    display: none; /* Caché par défaut */
 }
 
