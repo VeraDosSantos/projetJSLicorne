@@ -9,3 +9,20 @@ const DIALOGUE = [
     { user: "Lapin Bug", text: "Bonne chance avec ça ! Mais n'oublie pas, là où il y a du code, il y a toujours un petit bug quelque part..." },
     { user: "Licorne Codeuse", text: "On verra bien ! En attendant, je retourne au travail... et cette fois, je suis prête à tout !" }
 ];
+
+document.getElementById('startButton').addEventListener('click', () => {
+    document.getElementById('welcomeText').style.display = 'none';
+    document.getElementById('startButton').style.display = 'none';
+
+    // Afficher la boîte de dialogue
+    document.getElementById('dialogueBox').style.display = 'block';
+
+    // Afficher les images
+    document.getElementById('unicornImg').style.display = 'block';
+    document.getElementById('rabbitImg').style.display = 'block';
+
+    // Afficher le bouton "Suivant"
+    document.getElementById('nextButton').style.display = 'inline-block';
+
+    // Démarrer le dialogue
+})
