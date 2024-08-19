@@ -86,7 +86,7 @@ button{
         margin-bottom: 10%;
     }
 
-    #licorneImage, #lapinImage {
+    #unicornImg, #rabbitImg {
         display: none; /* Caché par défaut */
         width: 50%; /* Taille des images */
         margin-bottom: 20px; /* Espacement en bas des images */
